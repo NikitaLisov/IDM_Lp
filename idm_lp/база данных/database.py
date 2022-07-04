@@ -25,7 +25,7 @@ class Database(BaseModel, ContextInstanceMixin):
     tokens: typing.List[str] = Field([], to_server='exclude', from_server='exclude')
     secret_code: str = Field("", to_server='exclude', from_server='include')
     ru_captcha_key: typing.Optional[str] = Field("", to_server='exclude', from_server='include')
-    service_prefixes: typing.List[str] = Field([".слп", "!слп"], to_server='exclude', from_server='exclude')
+    service_prefixes: typing.List[str] = Field([".млп", "!млп"], to_server='exclude', from_server='exclude')
 
     # Получаются исключительно с сервера
     repeater_word: str = Field("..", to_server='include', from_server='include')
